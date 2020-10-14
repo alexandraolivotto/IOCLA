@@ -1,0 +1,24 @@
+Prefix AST - Tema 1 IOCLA
+Olivotto Alexandra 325CD
+
+In implementarea problemei folosesc trei functii: 
+
+evaluate_tree, care primeste ca parametru un nod si parcurge recursiv arborele 
+cu radacina in nodul respectiv astfel: se apeleaza parcurgerea pentru orice nod
+care nu este frunza (intai copilul stang, iar mai apoi copilul drept), intrucat
+daca nu este frunza inseamna ca este operand, deci implicit radacina de 
+subarbore care trebuie calculat (din enunt). 
+Pe masura ce parcurg arborele, efectuez operatiile pe subarbori pastrand 
+rezultatul partial pe stiva, astfel ca atunci cand arborele nu este 
+balansat (un copil este frunza, iar celalalt subarbore) patternul nu este 
+afectat, adica valorile pe care se aplica operatia curenta se afla pe stiva in 
+ordinea asteptata.
+
+operate, care primeste ca parametrii doua valori numerice si un operator si 
+efectueaza calculul matematic. am folosit variabile locale pentru a distinge 
+tipul operatorului.
+
+atoi, care primeste ca parametru o adresa a unui string si il transforma in 
+valoare numerica. Functia este apelata exclusiv pe stringurile frunzelor, 
+deci nu se va confrunta cu stringuri care reprezinta operatori, in consecinta 
+nu va altera constructia acestora.
